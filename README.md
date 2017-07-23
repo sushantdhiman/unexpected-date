@@ -39,8 +39,7 @@ expect.use(require('unexpected-date'));
 
 ### Browser
 
-Include the `unexpected-date.min.js` found at the lib directory of this
-repository.
+Include `unexpected-date.min.js` from root directory of this repository.
 
 ```html
 <script src="moment.js"></script>
