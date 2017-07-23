@@ -11,10 +11,10 @@ Failing assertions gives the following:
 
 ```js
 var dateA = new Date(Date.UTC(2010, 10, 10));
-expect(new Date(), 'to be between', dateA, dateA);
+expect(new Date(Date.UTC(2010, 10, 1)), 'to be between', dateA, dateA);
 ```
 
 ```output
-expected new Date('Sun, 23 Jul 2017 08:23:25.688 GMT')
+expected new Date('Mon, 01 Nov 2010 00:00:00 GMT')
 to be between new Date('Wed, 10 Nov 2010 00:00:00 GMT'), new Date('Wed, 10 Nov 2010 00:00:00 GMT')
 ```

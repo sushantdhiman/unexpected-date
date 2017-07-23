@@ -14,13 +14,13 @@ This module extends the
 library to support native date/time assertions.
 
 ```js
-var dateA = new Date();
+var dateA = new Date(Date.UTC(2010, 10, 11, 0, 0, 0));
 var dateB = new Date(Date.UTC(2010, 10, 10, 0, 0, 0));
 expect(dateA, 'to be same or before', dateB);
 ```
 
 ```output
-expected new Date('Sun, 23 Jul 2017 08:23:25.795 GMT')
+expected new Date('Thu, 11 Nov 2010 00:00:00 GMT')
 to be same or before new Date('Wed, 10 Nov 2010 00:00:00 GMT')
 ```
 
