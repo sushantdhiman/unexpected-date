@@ -1,0 +1,52 @@
+{
+  "name": "unexpected-date",
+  "version": "0.0.0",
+  "description": "Unexpected plugin for date/time assertions",
+  "main": "lib/unexpected-date.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "test": "mocha test/**/*.js documentation/**/*.md && npm run lint",
+    "travis": "npm test && npm run coverage && (<coverage/lcov.info coveralls || true) && npm run generate-site",
+    "coverage": "NODE_ENV=development istanbul cover _mocha -- --reporter dot",
+    "generate-site": "generate-site --require ./bootstrap-unexpected-markdown.js",
+    "update-examples": "generate-site --require ./bootstrap-unexpected-markdown.js --update-examples"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sushantdhiman/unexpected-date.git"
+  },
+  "keywords": [
+    "unexpected",
+    "date",
+    "time",
+    "datetime",
+    "testing",
+    "test",
+    "assertions"
+  ],
+  "author": {
+    "name": "Sushant Dhiman",
+    "email": "sushantdhiman@outlook.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sushantdhiman/unexpected-date/issues"
+  },
+  "homepage": "https://github.com/sushantdhiman/unexpected-date",
+  "peerDependencies": {
+    "unexpected": "^10.32.0"
+  },
+  "devDependencies": {
+    "coveralls": "^2.11.4",
+    "eslint": "2.13.1",
+    "eslint-config-onelint": "1.2.0",
+    "istanbul": "^0.4.0",
+    "mocha": "^2.3.3",
+    "unexpected": "^10.32.0",
+    "unexpected-documentation-site-generator": "^4.0.0",
+    "unexpected-markdown": "^1.4.0"
+  }
+}
