@@ -15,5 +15,6 @@ expect(new Date(), 'to be between', dateA, dateA);
 ```
 
 ```output
-Unknown assertion 'to be between', did you mean: 'to be below'
+expected new Date('Sun, 23 Jul 2017 08:23:25.688 GMT')
+to be between new Date('Wed, 10 Nov 2010 00:00:00 GMT'), new Date('Wed, 10 Nov 2010 00:00:00 GMT')
 ```

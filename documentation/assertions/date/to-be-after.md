@@ -15,5 +15,6 @@ expect(dateA, 'to be after', dateB);
 ```
 
 ```output
-Unknown assertion 'to be after', did you mean: 'to be a'
+expected new Date('Sun, 23 Jul 2017 08:23:25.627 GMT')
+to be after new Date('Sun, 23 Jul 2017 08:23:35.627 GMT')
 ```

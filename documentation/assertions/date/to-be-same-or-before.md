@@ -15,5 +15,6 @@ expect(dateA, 'to be same or before', dateB);
 ```
 
 ```output
-Unknown assertion 'to be same or before', did you mean: 'to be a number'
+expected new Date('Sun, 23 Jul 2017 08:23:25.733 GMT')
+to be same or before new Date('Sun, 23 Jul 2017 08:23:15.733 GMT')
 ```

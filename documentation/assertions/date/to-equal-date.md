@@ -14,5 +14,6 @@ expect(date, 'to equal date', new Date(Date.UTC(2010, 10, 10)));
 ```
 
 ```output
-Unknown assertion 'to equal date', did you mean: 'to equal'
+expected new Date('Sun, 23 Jul 2017 08:23:25.753 GMT')
+to equal date new Date('Wed, 10 Nov 2010 00:00:00 GMT')
 ```
