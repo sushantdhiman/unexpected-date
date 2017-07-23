@@ -7,11 +7,11 @@ repository: https://github.com/sushantdhiman/unexpected-date
 
 # Unexpected-date
 
-![Unexpected date :)](unexpectedDate.jpg)
+![Unexpected date :)](unexpectedDate.png)
 
 This module extends the
 [Unexpected](https://github.com/unexpectedjs/unexpected) assertion
-library to support native date/time assertions.
+library to support date/time assertions.
 
 ```js
 var dateA = new Date(Date.UTC(2010, 10, 11, 0, 0, 0));
@@ -48,20 +48,20 @@ expect.use(require('unexpected-date'));
 
 ### Browser
 
-Include the `unexpected.js` found at the lib directory of this
+Include the `unexpected-date.min.js` found at the lib directory of this
 repository.
 
 ```html
 <script src="moment.js"></script>
 <script src="unexpected.js"></script>
-<script src="unexpected-date.js"></script>
+<script src="unexpected-date.min.js"></script>
 ```
 
 this will expose the expect function under the following namespace:
 
 ```js#evaluate:false
 var expect = weknowhow.expect.clone();
-expect.use(moment.unexpectedDate);
+expect.use(unexpectedDate);
 ```
 
 ### RequireJS
@@ -69,7 +69,7 @@ expect.use(moment.unexpectedDate);
 Include the library with RequireJS the following way:
 
 ```js#evaluate:false
-define(['unexpected', 'unexpected-date'], funtion (unexpected, unexpectedDate) {
+define(['unexpected', 'unexpectedDate'], funtion (unexpected, unexpectedDate) {
    var expect = unexpected.clone();
    expect.use(unexpectedDate);
    // Your code

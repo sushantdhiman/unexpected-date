@@ -8,11 +8,12 @@
   },
   "scripts": {
     "lint": "eslint .",
-    "test": "mocha test/**/*.js documentation/**/*.md && npm run lint",
-    "travis": "npm test && npm run coverage && (<coverage/lcov.info coveralls || true) && npm run generate-site",
-    "coverage": "NODE_ENV=development istanbul cover _mocha -- --reporter dot",
-    "generate-site": "generate-site --require ./bootstrap-unexpected-markdown.js",
-    "update-examples": "generate-site --require ./bootstrap-unexpected-markdown.js --update-examples"
+    "test": "TZ='Asia/Kolkata' mocha test/**/*.js documentation/**/*.md && npm run lint",
+    "travis": "TZ='Asia/Kolkata' npm test && npm run coverage && (<coverage/lcov.info coveralls || true) && npm run generate-site",
+    "coverage": "TZ='Asia/Kolkata' NODE_ENV=development istanbul cover _mocha -- --reporter dot",
+    "generate-site": "TZ='Asia/Kolkata' generate-site --require ./bootstrap-unexpected-markdown.js",
+    "update-examples": "TZ='Asia/Kolkata' generate-site --require ./bootstrap-unexpected-markdown.js --update-examples",
+    "bundle": "./node_modules/.bin/rollup -c"
   },
   "repository": {
     "type": "git",
@@ -45,6 +46,11 @@
     "eslint-config-onelint": "1.2.0",
     "istanbul": "^0.4.0",
     "mocha": "^2.3.3",
+    "rollup": "^0.45.2",
+    "rollup-plugin-commonjs": "^8.0.2",
+    "rollup-plugin-node-globals": "^1.1.0",
+    "rollup-plugin-node-resolve": "^3.0.0",
+    "rollup-plugin-uglify": "^2.0.1",
     "unexpected": "^10.32.0",
     "unexpected-documentation-site-generator": "^4.0.0",
     "unexpected-markdown": "^1.4.0"
