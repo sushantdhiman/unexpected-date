@@ -19,7 +19,8 @@ describe('unexpected-date', function () {
               },
               'to error with',
               'expected new Date(\'Tue, 09 Nov 2010 18:30:00 GMT\')\n' +
-              'to be between new Date(\'Wed, 10 Nov 2010 18:30:00 GMT\'), new Date(\'Thu, 11 Nov 2010 18:30:00 GMT\')'
+              'to be between new Date(\'Wed, 10 Nov 2010 18:30:00 GMT\') ' +
+              'and new Date(\'Thu, 11 Nov 2010 18:30:00 GMT\')'
             );
         });
     });
@@ -36,8 +37,57 @@ describe('unexpected-date', function () {
               },
               'to error with',
               'expected new Date(\'Wed, 10 Nov 2010 18:30:00 GMT\')\n' +
-              'not to be between new Date(\'Tue, 09 Nov 2010 18:30:00 GMT\'), new Date(\'Thu, 11 Nov 2010 18:30:00 GMT\')'
+              'not to be between new Date(\'Tue, 09 Nov 2010 18:30:00 GMT\') ' +
+              'and new Date(\'Thu, 11 Nov 2010 18:30:00 GMT\')'
             );
+        });
+    });
+
+    describe('to be inclusively between', function () {
+        it('passes if the subject is the same as the first value', function () {
+            expect(new Date(0), 'to be inclusively between', new Date(0), new Date(1));
+        });
+
+        it('passes if the subject is the same as the second value', function () {
+            expect(new Date(1), 'to be inclusively between', new Date(0), new Date(1));
+        });
+
+        it('passes if the subject occurs betwen the two values', function () {
+            expect(new Date(1), 'to be inclusively between', new Date(0), new Date(2));
+        });
+
+        it('passes if the two values are the same', function () {
+            expect(new Date(0), 'to be inclusively between', new Date(0), new Date(0));
+        });
+
+        it('throws the correct error if the assertion fails', function () {
+            expect(
+               function () {
+                   expect(new Date(2010, 1, 4), 'to be inclusively between', new Date(2010, 1, 1), new Date(2010, 1, 1, 23));
+               },
+               'to error with',
+               'expected new Date(\'Wed, 03 Feb 2010 18:30:00 GMT\')\n' +
+               'to be inclusively between new Date(\'Sun, 31 Jan 2010 18:30:00 GMT\') ' +
+               'and new Date(\'Mon, 01 Feb 2010 17:30:00 GMT\')'
+           );
+        });
+    });
+
+    describe('not to be inclusively between', function () {
+        it('passes if the subject is neither the same as the first value or the second, nor does it occur between them', function () {
+            expect(new Date(0), 'not to be inclusively between', new Date(1), new Date(1));
+        });
+
+        it('throws the correct error if the assertion fails', function () {
+            expect(
+               function () {
+                   expect(new Date(2010, 1, 2), 'not to be inclusively between', new Date(2010, 1, 2), new Date(2010, 1, 2));
+               },
+               'to error with',
+               'expected new Date(\'Mon, 01 Feb 2010 18:30:00 GMT\')\n' +
+               'not to be inclusively between new Date(\'Mon, 01 Feb 2010 18:30:00 GMT\') ' +
+               'and new Date(\'Mon, 01 Feb 2010 18:30:00 GMT\')'
+           );
         });
     });
 });

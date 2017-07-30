@@ -7,6 +7,12 @@ var dateC = new Date(Date.UTC(2010, 10, 12));
 expect(dateB, 'to be between', dateA, dateC);
 ```
 
+To include the edge points as valid values you can use `inclusively` flag:
+
+```js
+expect(new Date(0), 'to be inclusively between', new Date(0), new Date(1));
+```
+
 Failing assertions gives the following:
 
 ```js
@@ -20,5 +26,5 @@ expect(
 
 ```output
 expected new Date('Wed, 10 Nov 2010 00:00:00 GMT')
-to be between new Date('Wed, 10 Nov 2010 00:00:01 GMT'), new Date('Wed, 10 Nov 2010 00:00:02 GMT')
+to be between new Date('Wed, 10 Nov 2010 00:00:01 GMT') and new Date('Wed, 10 Nov 2010 00:00:02 GMT')
 ```
