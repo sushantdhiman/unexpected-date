@@ -51,7 +51,6 @@ expect.use(require('unexpected-date'));
 Include `unexpected-date.min.js` from root directory of this repository.
 
 ```html
-<script src="moment.js"></script>
 <script src="unexpected.js"></script>
 <script src="unexpected-date.min.js"></script>
 ```
