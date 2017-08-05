@@ -1,10 +1,32 @@
+sudo: false
+dist: trusty
+
 language: node_js
-node_js:
-  - "0.10"
-  - "0.12"
-  - "4"
-  - "5"
-  - "6"
-  - "7"
-  - "8"
-script: "npm run-script travis"
+
+matrix:
+  include:
+  - node_js: "0.10"
+    env: LINT=0
+  - node_js: "0.12"
+    env: LINT=0
+  - node_js: "4"
+    env: LINT=1
+  - node_js: "5"
+    env: LINT=1
+  - node_js: "6"
+    env: LINT=1
+  - node_js: "7"
+    env: LINT=1
+  - node_js: "8"
+    env: LINT=1
+
+cache:
+  directories:
+  - node_modules
+
+notifications:
+  email: false
+
+script:
+ - if [ "$LINT" = "1" ]; then npm run lint; fi
+ - npm run travis
