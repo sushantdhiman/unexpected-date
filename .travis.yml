@@ -29,4 +29,4 @@ notifications:
 
 script:
  - if [ "$LINT" = "1" ]; then npm run lint; fi
- - npm run tavis
+ - npm run travis
