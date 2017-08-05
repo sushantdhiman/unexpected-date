@@ -42,8 +42,7 @@
   },
   "devDependencies": {
     "coveralls": "^2.11.4",
-    "eslint": "2.13.1",
-    "eslint-config-onelint": "1.2.0",
+    "eslint": "^4.3.0",
     "istanbul": "^0.4.0",
     "mocha": "^2.3.3",
     "rollup": "^0.45.2",
