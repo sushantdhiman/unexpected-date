@@ -8,7 +8,7 @@
   },
   "scripts": {
     "lint": "eslint .",
-    "test": "TZ='Asia/Kolkata' mocha test/**/*.spec.js documentation/**/*.md && npm run lint",
+    "test": "TZ='Asia/Kolkata' mocha test/**/*.spec.js documentation/**/*.md",
     "travis": "TZ='Asia/Kolkata' npm test && npm run coverage && (<coverage/lcov.info coveralls || true)",
     "coverage": "TZ='Asia/Kolkata' NODE_ENV=development istanbul cover _mocha -- --reporter dot",
     "generate-site": "TZ='Asia/Kolkata' generate-site --require ./bootstrap-unexpected-markdown.js",
