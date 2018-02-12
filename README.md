@@ -64,6 +64,7 @@ You can find more detailed docs [here](http://sushantdhiman.com/projects/unexpec
 - `to be after`
 - `to be before`
 - `to be [inclusively] between`
+- `to be close to`
 - `to be same or after`
 - `to be same or before`
 - `to equal date`
