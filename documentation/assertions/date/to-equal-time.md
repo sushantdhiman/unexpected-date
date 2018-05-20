@@ -1,4 +1,4 @@
-Passes if one moment instance represents the same time as another moment instance.
+Passes if one Date instance represents the same time as another Date instance.
 
 ```js
 var date = new Date();
