@@ -52,7 +52,7 @@
     "rollup-plugin-node-globals": "^1.2.1",
     "rollup-plugin-node-resolve": "^3.3.0",
     "rollup-plugin-uglify": "^2.0.1",
-    "unexpected": "^10.32.0",
+    "unexpected": "^11.0.0-4",
     "unexpected-documentation-site-generator": "^4.0.0",
     "unexpected-markdown": "^1.4.0"
   }

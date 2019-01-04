@@ -3,6 +3,10 @@ var unexpected = require('unexpected'),
 
 describe('unexpected-date', function() {
   var expect = unexpected.clone().use(unexpectedDate);
+
+  // Make sure that error messages are rendered deterministically,
+  // regardless of the width of the terminal window:
+  expect.output.preferredWidth = 80;
   var dateA = new Date(2010, 10, 10);
   var dateB = new Date(2010, 10, 11);
 
