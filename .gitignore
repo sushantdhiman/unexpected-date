@@ -1,5 +1,5 @@
-node_modules
-site-build
-coverage
+node_modules/
+site-build/
+coverage/
 npm-debug.log
 package-lock.json
