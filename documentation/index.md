@@ -46,34 +46,6 @@ var expect = require('unexpected').clone();
 expect.use(require('unexpected-date'));
 ```
 
-### Browser
-
-Include `unexpected-date.min.js` from root directory of this repository.
-
-```html
-<script src="unexpected.js"></script>
-<script src="unexpected-date.min.js"></script>
-```
-
-this will expose the expect function under the following namespace:
-
-```js#evaluate:false
-var expect = weknowhow.expect.clone();
-expect.use(unexpectedDate);
-```
-
-### RequireJS
-
-Include the library with RequireJS the following way:
-
-```js#evaluate:false
-define(['unexpected', 'unexpectedDate'], funtion (unexpected, unexpectedDate) {
-   var expect = unexpected.clone();
-   expect.use(unexpectedDate);
-   // Your code
-});
-```
-
 ## MIT License
 
 The MIT License (MIT)

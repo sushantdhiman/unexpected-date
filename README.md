@@ -21,7 +21,6 @@ Use this module if you are looking for
 
 - Assertions on native [Date](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Date) objects
 - Dependency free light-weight module
-- Browser support
 
 ## Installation
 
@@ -35,24 +34,8 @@ $ yarn add --dev unexpected-date
 ```
 
 ```javascript
-var expect = require('unexpected').clone();
-expect.use(require('unexpected-date'));
-```
-
-### Browser
-
-Include `unexpected-date.min.js` from root directory of this repository.
-
-```html
-<script src="unexpected.js"></script>
-<script src="unexpected-date.min.js"></script>
-```
-
-This will expose the expect function under the following namespace:
-
-```javascript
-var expect = weknowhow.expect.clone();
-expect.use(unexpectedDate);
+var expect = require("unexpected").clone();
+expect.use(require("unexpected-date"));
 ```
 
 ## Documentation
