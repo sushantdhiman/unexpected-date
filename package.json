@@ -31,7 +31,7 @@
     "pretty": "prettier lib test documentation --loglevel=silent --write",
     "test": "TZ='Asia/Kolkata' mocha --exit test/**/*.spec.js documentation/**/*.md",
     "travis": "TZ='Asia/Kolkata' npm test && npm run coverage && (<coverage/lcov.info coveralls || true)",
-    "coverage": "TZ='Asia/Kolkata' NODE_ENV=development nyc npm run test -- --reporter dot",
+    "coverage": "TZ='Asia/Kolkata' NODE_ENV=development nyc --reporter=lcov npm run test -- --reporter dot",
     "generate-site": "TZ='Asia/Kolkata' generate-site --require ./bootstrap-unexpected-markdown.js",
     "update-examples": "TZ='Asia/Kolkata' generate-site --require ./bootstrap-unexpected-markdown.js --update-examples"
   },
