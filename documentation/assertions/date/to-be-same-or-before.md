@@ -3,7 +3,7 @@ Passes if the Date instance represents a time at or before the specified time.
 ```js
 var dateA = new Date();
 var dateB = new Date(dateA.getTime() + 10 * 1000);
-expect(dateA, "to be same or before", dateB);
+expect(dateA, 'to be same or before', dateB);
 ```
 
 When the assertion fails you'll get this output:
@@ -11,7 +11,7 @@ When the assertion fails you'll get this output:
 ```js
 var dateA = new Date(Date.UTC(2010, 10, 10));
 var dateB = new Date(dateA.getTime() - 10 * 1000);
-expect(dateA, "to be same or before", dateB);
+expect(dateA, 'to be same or before', dateB);
 ```
 
 ```output

@@ -1,7 +1,0 @@
-.nyc_output
-node_modules
-site-build
-documentation
-.travis.yml
-bootstrap-unexpected-markdown.js
-rollup.config.js

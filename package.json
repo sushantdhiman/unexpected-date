@@ -2,19 +2,8 @@
   "name": "unexpected-date",
   "version": "2.0.0",
   "description": "Unexpected plugin for date/time assertions",
-  "main": "lib/unexpected-date.js",
-  "directories": {
-    "test": "test",
-    "lib": "lib"
-  },
-  "scripts": {
-    "lint": "eslint .",
-    "test": "TZ='Asia/Kolkata' mocha --exit test/**/*.spec.js documentation/**/*.md",
-    "travis": "TZ='Asia/Kolkata' npm test && npm run coverage && (<coverage/lcov.info coveralls || true)",
-    "coverage": "TZ='Asia/Kolkata' NODE_ENV=development nyc npm run test -- --reporter dot",
-    "generate-site": "TZ='Asia/Kolkata' generate-site --require ./bootstrap-unexpected-markdown.js",
-    "update-examples": "TZ='Asia/Kolkata' generate-site --require ./bootstrap-unexpected-markdown.js --update-examples"
-  },
+  "author": "Sushant Dhiman<sushantdhiman@outlook.com>",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/sushantdhiman/unexpected-date.git"
@@ -29,23 +18,40 @@
     "assert",
     "assertions"
   ],
-  "author": {
-    "name": "Sushant Dhiman",
-    "email": "sushantdhiman@outlook.com"
-  },
-  "license": "MIT",
   "bugs": {
     "url": "https://github.com/sushantdhiman/unexpected-date/issues"
   },
   "homepage": "https://github.com/sushantdhiman/unexpected-date",
+  "main": "lib/unexpected-date.js",
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "lint": "eslint .",
+    "pretty": "prettier lib test documentation --loglevel=silent --write",
+    "test": "TZ='Asia/Kolkata' mocha --exit test/**/*.spec.js documentation/**/*.md",
+    "travis": "TZ='Asia/Kolkata' npm test && npm run coverage && (<coverage/lcov.info coveralls || true)",
+    "coverage": "TZ='Asia/Kolkata' NODE_ENV=development nyc npm run test -- --reporter dot",
+    "generate-site": "TZ='Asia/Kolkata' generate-site --require ./bootstrap-unexpected-markdown.js",
+    "update-examples": "TZ='Asia/Kolkata' generate-site --require ./bootstrap-unexpected-markdown.js --update-examples"
+  },
+  "engines": {
+    "node": ">=10.0.0"
+  },
+  "prettier": {
+    "singleQuote": true
+  },
   "peerDependencies": {
     "unexpected": ">=10.32.0"
   },
   "devDependencies": {
     "coveralls": "latest",
     "eslint": "latest",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-prettier": "^3.1.3",
     "mocha": "latest",
     "nyc": "latest",
+    "prettier": "^2.0.5",
     "unexpected": "latest",
     "unexpected-documentation-site-generator": "latest",
     "unexpected-markdown": "latest"
