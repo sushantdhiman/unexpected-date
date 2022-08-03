@@ -25,6 +25,6 @@ expect(
 ```
 
 ```output
-expected new Date('Wed, 10 Nov 2010 00:00:00 GMT')
-to be between new Date('Wed, 10 Nov 2010 00:00:01 GMT') and new Date('Wed, 10 Nov 2010 00:00:02 GMT')
+expected new Date('2010-11-10T00:00:00Z')
+to be between new Date('2010-11-10T00:00:01Z') and new Date('2010-11-10T00:00:02Z')
 ```

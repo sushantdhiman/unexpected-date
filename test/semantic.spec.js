@@ -21,8 +21,8 @@ describe('unexpected-date', function () {
           expect('Yak', 'with date semantics', 'to be after', dateB);
         },
         'to error with',
-        "expected 'Yak'\n" +
-          "with date semantics to be after new Date('Wed, 10 Nov 2010 18:30:00 GMT')"
+        "expected 'Yak' " +
+          "with date semantics to be after new Date('2010-11-10T18:30:00Z')"
       );
     });
   });

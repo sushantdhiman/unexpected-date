@@ -1,0 +1,7 @@
+{
+  "require": ["./bootstrap-unexpected-markdown.js", "unexpected-markdown"],
+  "spec": ["test/**/*.spec.js", "documentation/**/*.md"],
+  "reporter": "spec",
+  "recursive": true,
+  "exit": true
+}

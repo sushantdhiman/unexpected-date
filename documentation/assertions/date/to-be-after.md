@@ -17,6 +17,6 @@ expect(
 ```
 
 ```output
-expected new Date('Wed, 10 Nov 2010 00:00:00 GMT')
-to be after new Date('Wed, 10 Nov 2010 00:00:10 GMT')
+expected new Date('2010-11-10T00:00:00Z')
+to be after new Date('2010-11-10T00:00:10Z')
 ```

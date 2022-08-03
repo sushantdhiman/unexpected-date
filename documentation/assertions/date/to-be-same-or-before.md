@@ -15,6 +15,6 @@ expect(dateA, 'to be same or before', dateB);
 ```
 
 ```output
-expected new Date('Wed, 10 Nov 2010 00:00:00 GMT')
-to be same or before new Date('Tue, 09 Nov 2010 23:59:50 GMT')
+expected new Date('2010-11-10T00:00:00Z')
+to be same or before new Date('2010-11-09T23:59:50Z')
 ```

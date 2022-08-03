@@ -34,8 +34,8 @@ describe('unexpected-date', function () {
           expect(dateA, 'to equal date', dateB);
         },
         'to error with',
-        "expected new Date('Tue, 09 Nov 2010 18:30:00 GMT')\n" +
-          "to equal date new Date('Wed, 10 Nov 2010 18:30:00 GMT')"
+        "expected new Date('2010-11-09T18:30:00Z')\n" +
+          "to equal date new Date('2010-11-10T18:30:00Z')"
       );
     });
   });
@@ -55,8 +55,8 @@ describe('unexpected-date', function () {
           expect(new Date(0), 'to equal time', new Date(1));
         },
         'to error with',
-        "expected new Date('Thu, 01 Jan 1970 00:00:00 GMT')\n" +
-          "to equal time new Date('Thu, 01 Jan 1970 00:00:00.001 GMT')"
+        "expected new Date('1970-01-01T00:00:00Z')\n" +
+          "to equal time new Date('1970-01-01T00:00:00.001Z')"
       );
     });
   });

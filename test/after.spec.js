@@ -21,8 +21,8 @@ describe('unexpected-date', function () {
           expect(dateA, 'to be after', dateB);
         },
         'to error with',
-        "expected new Date('Tue, 09 Nov 2010 18:30:00 GMT')\n" +
-          "to be after new Date('Wed, 10 Nov 2010 18:30:00 GMT')"
+        "expected new Date('2010-11-09T18:30:00Z')\n" +
+          "to be after new Date('2010-11-10T18:30:00Z')"
       );
     });
   });
@@ -38,8 +38,8 @@ describe('unexpected-date', function () {
           expect(dateB, 'not to be after', dateA);
         },
         'to error with',
-        "expected new Date('Wed, 10 Nov 2010 18:30:00 GMT')\n" +
-          "not to be after new Date('Tue, 09 Nov 2010 18:30:00 GMT')"
+        "expected new Date('2010-11-10T18:30:00Z')\n" +
+          "not to be after new Date('2010-11-09T18:30:00Z')"
       );
     });
   });
@@ -59,8 +59,8 @@ describe('unexpected-date', function () {
           expect(dateA, 'to be same or after', dateB);
         },
         'to error with',
-        "expected new Date('Tue, 09 Nov 2010 18:30:00 GMT')\n" +
-          "to be same or after new Date('Wed, 10 Nov 2010 18:30:00 GMT')"
+        "expected new Date('2010-11-09T18:30:00Z')\n" +
+          "to be same or after new Date('2010-11-10T18:30:00Z')"
       );
     });
   });
@@ -76,8 +76,8 @@ describe('unexpected-date', function () {
           expect(dateB, 'not to be same or after', dateA);
         },
         'to error with',
-        "expected new Date('Wed, 10 Nov 2010 18:30:00 GMT')\n" +
-          "not to be same or after new Date('Tue, 09 Nov 2010 18:30:00 GMT')"
+        "expected new Date('2010-11-10T18:30:00Z')\n" +
+          "not to be same or after new Date('2010-11-09T18:30:00Z')"
       );
     });
   });

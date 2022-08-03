@@ -37,8 +37,8 @@ describe('unexpected-date', function () {
           expect(dateA, 'to be close to', dateB);
         },
         'to error with',
-        "expected new Date('Tue, 09 Nov 2010 18:30:00 GMT')\n" +
-          "to be close to new Date('Wed, 10 Nov 2010 18:30:00 GMT') (epsilon: 1e+3)"
+        "expected new Date('2010-11-09T18:30:00Z')\n" +
+          "to be close to new Date('2010-11-10T18:30:00Z') (epsilon: 1e+3)"
       );
     });
 
@@ -48,8 +48,8 @@ describe('unexpected-date', function () {
           expect(dateA, 'to be close to', dateB, 1000);
         },
         'to error with',
-        "expected new Date('Tue, 09 Nov 2010 18:30:00 GMT')\n" +
-          "to be close to new Date('Wed, 10 Nov 2010 18:30:00 GMT') (epsilon: 1e+3)"
+        "expected new Date('2010-11-09T18:30:00Z')\n" +
+          "to be close to new Date('2010-11-10T18:30:00Z') (epsilon: 1e+3)"
       );
     });
   });
