@@ -29,9 +29,7 @@
   "scripts": {
     "lint": "eslint .",
     "pretty": "prettier lib test documentation --loglevel=silent --write",
-    "test": "TZ='Asia/Kolkata' mocha --exit test/**/*.spec.js documentation/**/*.md",
-    "travis": "TZ='Asia/Kolkata' npm test && npm run coverage && (<coverage/lcov.info coveralls || true)",
-    "coverage": "TZ='Asia/Kolkata' NODE_ENV=development nyc --reporter=lcov npm run test -- --reporter dot",
+    "test": "TZ='Asia/Kolkata' mocha",
     "generate-site": "TZ='Asia/Kolkata' generate-site --require ./bootstrap-unexpected-markdown.js",
     "update-examples": "TZ='Asia/Kolkata' generate-site --require ./bootstrap-unexpected-markdown.js --update-examples"
   },
@@ -45,12 +43,10 @@
     "unexpected": ">=10.32.0"
   },
   "devDependencies": {
-    "coveralls": "latest",
     "eslint": "latest",
     "eslint-config-prettier": "latest",
     "eslint-plugin-prettier": "latest",
-    "mocha": "latest",
-    "nyc": "latest",
+    "mocha": "^10.0.0",
     "prettier": "latest",
     "unexpected": "latest",
     "unexpected-documentation-site-generator": "latest",

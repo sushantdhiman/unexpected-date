@@ -14,6 +14,6 @@ expect(date, 'to equal time', new Date(Date.UTC(2010, 10, 10)));
 ```
 
 ```output
-expected new Date('Mon, 01 Nov 2010 00:00:00 GMT')
-to equal time new Date('Wed, 10 Nov 2010 00:00:00 GMT')
+expected new Date('2010-11-01T00:00:00Z')
+to equal time new Date('2010-11-10T00:00:00Z')
 ```

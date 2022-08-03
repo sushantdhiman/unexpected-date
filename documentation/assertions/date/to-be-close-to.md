@@ -14,6 +14,6 @@ expect(date, 'to be close to', new Date(Date.UTC(2010, 10, 10)), 20000);
 ```
 
 ```output
-expected new Date('Mon, 01 Nov 2010 00:00:00 GMT')
-to be close to new Date('Wed, 10 Nov 2010 00:00:00 GMT') (epsilon: 2e+4)
+expected new Date('2010-11-01T00:00:00Z')
+to be close to new Date('2010-11-10T00:00:00Z') (epsilon: 2e+4)
 ```
