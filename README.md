@@ -1,8 +1,7 @@
 # Unexpected-date
 
 [![NPM version](https://badge.fury.io/js/unexpected-date.svg)](https://www.npmjs.com/package/unexpected-date)
-[![Build Status](https://travis-ci.org/sushantdhiman/unexpected-date.svg?branch=master)](https://travis-ci.org/sushantdhiman/unexpected-date)
-[![Coverage Status](https://coveralls.io/repos/sushantdhiman/unexpected-date/badge.svg)](https://coveralls.io/r/sushantdhiman/unexpected-date)
+[![Node.js CI](https://github.com/sushantdhiman/unexpected-date/actions/workflows/ci.yml/badge.svg)](https://github.com/sushantdhiman/unexpected-date/actions/workflows/ci.yml)
 
 Support for useful date/time assertions for
 [Unexpected.js](https://github.com/unexpectedjs/unexpected)
