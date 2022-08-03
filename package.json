@@ -28,7 +28,7 @@
   ],
   "scripts": {
     "lint": "eslint .",
-    "pretty": "prettier lib test documentation --loglevel=silent --write",
+    "pretty": "prettier lib test documentation --write",
     "test": "TZ='Asia/Kolkata' mocha",
     "generate-site": "TZ='Asia/Kolkata' generate-site --require ./bootstrap-unexpected-markdown.js",
     "update-examples": "TZ='Asia/Kolkata' generate-site --require ./bootstrap-unexpected-markdown.js --update-examples"

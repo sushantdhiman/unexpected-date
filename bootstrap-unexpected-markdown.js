@@ -1,4 +1,4 @@
-/*global unexpected:true*/
+/*global expect:true*/
 expect = require('unexpected').clone().use(require('./lib/unexpected-date'));
 
 // Make sure that error messages are rendered deterministically,
